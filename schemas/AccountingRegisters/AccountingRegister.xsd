@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="NewDataSet" targetNamespace="http://v8.1c.ru/8.3/MDClasses" xmlns:mstns="http://v8.1c.ru/8.3/MDClasses" xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified" xmlns:app1="http://v8.1c.ru/8.1/data/core" xmlns:app2="http://v8.1c.ru/8.3/xcf/readable">
+  <xs:element name="Type">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Type" minOccurs="0" />
+        <xs:element name="StringQualifiers" />
+        <xs:element name="NumberQualifiers" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MetaDataObject">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="AccountingRegister">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="InternalInfo" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="GeneratedType" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Properties">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Name" type="xs:string" minOccurs="0" />
+                    <xs:element name="Synonym" type="xs:string" minOccurs="0" />
+                    <xs:element name="Comment" type="xs:string" minOccurs="0" />
+                    <xs:element name="UseStandardCommands" type="xs:string" minOccurs="0" />
+                    <xs:element name="IncludeHelpInContents" type="xs:string" minOccurs="0" />
+                    <xs:element name="ChartOfAccounts" type="xs:string" minOccurs="0" />
+                    <xs:element name="Correspondence" type="xs:string" minOccurs="0" />
+                    <xs:element name="PeriodAdjustmentLength" type="xs:string" minOccurs="0" />
+                    <xs:element name="DefaultListForm" type="xs:string" minOccurs="0" />
+                    <xs:element name="AuxiliaryListForm" type="xs:string" minOccurs="0" />
+                    <xs:element name="DataLockControlMode" type="xs:string" minOccurs="0" />
+                    <xs:element name="EnableTotalsSplitting" type="xs:string" minOccurs="0" />
+                    <xs:element name="FullTextSearch" type="xs:string" minOccurs="0" />
+                    <xs:element name="ListPresentation" type="xs:string" minOccurs="0" />
+                    <xs:element name="ExtendedListPresentation" type="xs:string" minOccurs="0" />
+                    <xs:element name="Explanation" type="xs:string" minOccurs="0" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="ChildObjects">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Dimension" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Properties">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Name" type="xs:string" minOccurs="0" />
+                                <xs:element name="Synonym" type="xs:string" minOccurs="0" />
+                                <xs:element name="Comment" type="xs:string" minOccurs="0" />
+                                <xs:element name="PasswordMode" type="xs:string" minOccurs="0" />
+                                <xs:element name="Format" type="xs:string" minOccurs="0" />
+                                <xs:element name="EditFormat" type="xs:string" minOccurs="0" />
+                                <xs:element name="ToolTip" type="xs:string" minOccurs="0" />
+                                <xs:element name="MarkNegatives" type="xs:string" minOccurs="0" />
+                                <xs:element name="Mask" type="xs:string" minOccurs="0" />
+                                <xs:element name="MultiLine" type="xs:string" minOccurs="0" />
+                                <xs:element name="ExtendedEdit" type="xs:string" minOccurs="0" />
+                                <xs:element name="MinValue" type="xs:string" minOccurs="0" />
+                                <xs:element name="MaxValue" type="xs:string" minOccurs="0" />
+                                <xs:element name="FillChecking" type="xs:string" minOccurs="0" />
+                                <xs:element name="ChoiceFoldersAndItems" type="xs:string" minOccurs="0" />
+                                <xs:element name="ChoiceParameterLinks" type="xs:string" minOccurs="0" />
+                                <xs:element name="ChoiceParameters" type="xs:string" minOccurs="0" />
+                                <xs:element name="QuickChoice" type="xs:string" minOccurs="0" />
+                                <xs:element name="CreateOnInput" type="xs:string" minOccurs="0" />
+                                <xs:element name="ChoiceForm" type="xs:string" minOccurs="0" />
+                                <xs:element name="LinkByType" type="xs:string" minOccurs="0" />
+                                <xs:element name="ChoiceHistoryOnInput" type="xs:string" minOccurs="0" />
+                                <xs:element name="Balance" type="xs:string" minOccurs="0" />
+                                <xs:element name="AccountingFlag" type="xs:string" minOccurs="0" />
+                                <xs:element name="DenyIncompleteValues" type="xs:string" minOccurs="0" />
+                                <xs:element name="Indexing" type="xs:string" minOccurs="0" />
+                                <xs:element name="FullTextSearch" type="xs:string" minOccurs="0" />
+                                <xs:element ref="Type" minOccurs="0" maxOccurs="unbounded" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="uuid" form="unqualified" type="xs:string" />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Resource" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Properties">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Name" type="xs:string" minOccurs="0" />
+                                <xs:element name="Synonym" type="xs:string" minOccurs="0" />
+                                <xs:element name="Comment" type="xs:string" minOccurs="0" />
+                                <xs:element name="PasswordMode" type="xs:string" minOccurs="0" />
+                                <xs:element name="Format" type="xs:string" minOccurs="0" />
+                                <xs:element name="EditFormat" type="xs:string" minOccurs="0" />
+                                <xs:element name="ToolTip" type="xs:string" minOccurs="0" />
+                                <xs:element name="MarkNegatives" type="xs:string" minOccurs="0" />
+                                <xs:element name="Mask" type="xs:string" minOccurs="0" />
+                                <xs:element name="MultiLine" type="xs:string" minOccurs="0" />
+                                <xs:element name="ExtendedEdit" type="xs:string" minOccurs="0" />
+                                <xs:element name="MinValue" type="xs:string" minOccurs="0" />
+                                <xs:element name="MaxValue" type="xs:string" minOccurs="0" />
+                                <xs:element name="FillChecking" type="xs:string" minOccurs="0" />
+                                <xs:element name="ChoiceFoldersAndItems" type="xs:string" minOccurs="0" />
+                                <xs:element name="ChoiceParameterLinks" type="xs:string" minOccurs="0" />
+                                <xs:element name="ChoiceParameters" type="xs:string" minOccurs="0" />
+                                <xs:element name="QuickChoice" type="xs:string" minOccurs="0" />
+                                <xs:element name="CreateOnInput" type="xs:string" minOccurs="0" />
+                                <xs:element name="ChoiceForm" type="xs:string" minOccurs="0" />
+                                <xs:element name="LinkByType" type="xs:string" minOccurs="0" />
+                                <xs:element name="ChoiceHistoryOnInput" type="xs:string" minOccurs="0" />
+                                <xs:element name="Balance" type="xs:string" minOccurs="0" />
+                                <xs:element name="AccountingFlag" type="xs:string" minOccurs="0" />
+                                <xs:element name="ExtDimensionAccountingFlag" type="xs:string" minOccurs="0" />
+                                <xs:element name="FullTextSearch" type="xs:string" minOccurs="0" />
+                                <xs:element ref="Type" minOccurs="0" maxOccurs="unbounded" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="uuid" form="unqualified" type="xs:string" />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Form" nillable="true" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:simpleContent msdata:ColumnName="Form_Text" msdata:Ordinal="0">
+                          <xs:extension base="xs:string">
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="uuid" form="unqualified" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="version" form="unqualified" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="Type" />
+        <xs:element ref="MetaDataObject" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

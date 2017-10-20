@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="NewDataSet" targetNamespace="http://v8.1c.ru/8.3/MDClasses" xmlns:mstns="http://v8.1c.ru/8.3/MDClasses" xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified" xmlns:app1="http://v8.1c.ru/8.3/xcf/readable">
+   <xs:element name="MetaDataObject">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Subsystem">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ChildObjects" type="xs:string" minOccurs="0" msdata:Ordinal="1" />
+              <xs:element name="Properties">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Name" type="xs:string" minOccurs="0" />
+                    <xs:element name="Synonym" type="xs:string" minOccurs="0" />
+                    <xs:element name="Comment" type="xs:string" minOccurs="0" />
+                    <xs:element name="IncludeHelpInContents" type="xs:string" minOccurs="0" />
+                    <xs:element name="IncludeInCommandInterface" type="xs:string" minOccurs="0" />
+                    <xs:element name="Explanation" type="xs:string" minOccurs="0" />
+                    <xs:element name="Picture" type="xs:string" minOccurs="0" />
+                    <xs:element name="Content" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Item" nillable="true">
+                            <xs:complexType>
+                              <xs:simpleContent msdata:ColumnName="Item_Text" msdata:Ordinal="0">
+                                <xs:extension base="xs:string">
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="uuid" form="unqualified" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="version" form="unqualified" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice>
+        <xs:element ref="MetaDataObject" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

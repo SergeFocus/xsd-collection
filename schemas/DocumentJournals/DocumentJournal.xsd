@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="NewDataSet" targetNamespace="http://v8.1c.ru/8.3/MDClasses" xmlns:mstns="http://v8.1c.ru/8.3/MDClasses" xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified" xmlns:app1="http://v8.1c.ru/8.3/xcf/readable">
+   <xs:element name="MetaDataObject">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="DocumentJournal">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="InternalInfo" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="GeneratedType" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Properties">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Name" type="xs:string" minOccurs="0" />
+                    <xs:element name="Synonym" type="xs:string" minOccurs="0" />
+                    <xs:element name="Comment" type="xs:string" minOccurs="0" />
+                    <xs:element name="DefaultForm" type="xs:string" minOccurs="0" />
+                    <xs:element name="AuxiliaryForm" type="xs:string" minOccurs="0" />
+                    <xs:element name="UseStandardCommands" type="xs:string" minOccurs="0" />
+                    <xs:element name="IncludeHelpInContents" type="xs:string" minOccurs="0" />
+                    <xs:element name="ListPresentation" type="xs:string" minOccurs="0" />
+                    <xs:element name="ExtendedListPresentation" type="xs:string" minOccurs="0" />
+                    <xs:element name="Explanation" type="xs:string" minOccurs="0" />
+                    <xs:element name="RegisteredDocuments" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Item" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="ChildObjects">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Column" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Properties">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Name" type="xs:string" minOccurs="0" />
+                                <xs:element name="Synonym" type="xs:string" minOccurs="0" />
+                                <xs:element name="Comment" type="xs:string" minOccurs="0" />
+                                <xs:element name="Indexing" type="xs:string" minOccurs="0" />
+                                <xs:element name="References" minOccurs="0" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="Item" />
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="uuid" form="unqualified" type="xs:string" />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Form" nillable="true" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:simpleContent msdata:ColumnName="Form_Text" msdata:Ordinal="0">
+                          <xs:extension base="xs:string">
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Command" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Properties">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Name" type="xs:string" minOccurs="0" />
+                                <xs:element name="Synonym" type="xs:string" minOccurs="0" />
+                                <xs:element name="Comment" type="xs:string" minOccurs="0" />
+                                <xs:element name="Group" type="xs:string" minOccurs="0" />
+                                <xs:element name="CommandParameterType" type="xs:string" minOccurs="0" />
+                                <xs:element name="ParameterUseMode" type="xs:string" minOccurs="0" />
+                                <xs:element name="ModifiesData" type="xs:string" minOccurs="0" />
+                                <xs:element name="Representation" type="xs:string" minOccurs="0" />
+                                <xs:element name="ToolTip" type="xs:string" minOccurs="0" />
+                                <xs:element name="Picture" type="xs:string" minOccurs="0" />
+                                <xs:element name="Shortcut" type="xs:string" minOccurs="0" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="uuid" form="unqualified" type="xs:string" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="uuid" form="unqualified" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="version" form="unqualified" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Item" />
+        <xs:element ref="MetaDataObject" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

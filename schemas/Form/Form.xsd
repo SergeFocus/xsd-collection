@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="NewDataSet" targetNamespace="http://v8.1c.ru/8.3/xcf/logform" xmlns:mstns="http://v8.1c.ru/8.3/xcf/logform" xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified" xmlns:app1="http://v8.1c.ru/8.1/data/core" xmlns:app2="http://v8.1c.ru/8.3/xcf/readable">
+  <xs:element name="Events" nillable="false" >
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Event" nillable="false" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:simpleContent msdata:ColumnName="Event_Text" msdata:Ordinal="1">
+              <xs:extension base="xs:string">
+                <xs:attribute name="name" form="unqualified" type="xs:string" />
+              </xs:extension>
+            </xs:simpleContent>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExtendedTooltip">
+    <xs:complexType>
+      <xs:attribute name="name" form="unqualified" type="xs:string" />
+      <xs:attribute name="id" form="unqualified" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Type">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Type" minOccurs="0" />
+        <xs:element name="StringQualifiers" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Value" type="xs:string" />
+  <xs:element name="Presentation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="item" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Form">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="AutoCommandBar">
+          <xs:complexType>
+            <xs:attribute name="name" form="unqualified" type="xs:string" />
+            <xs:attribute name="id" form="unqualified" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element ref="Events" minOccurs="0"/>
+        <xs:element name="ChildItems">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="InputField" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="DataPath" type="xs:string" minOccurs="0" msdata:Ordinal="0" />
+                    <xs:element name="ChoiceList" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Item" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="ContextMenu" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:attribute name="name" form="unqualified" type="xs:string" />
+                        <xs:attribute name="id" form="unqualified" type="xs:string" />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element ref="ExtendedTooltip" minOccurs="0" maxOccurs="unbounded" />
+                    <xs:element ref="Events" minOccurs="0"/>
+                  </xs:sequence>
+                  <xs:attribute name="name" form="unqualified" type="xs:string" />
+                  <xs:attribute name="id" form="unqualified" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Button" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Type" type="xs:string" minOccurs="0" msdata:Ordinal="0" />
+                    <xs:element name="CommandName" type="xs:string" minOccurs="0" msdata:Ordinal="1" />
+                    <xs:element ref="ExtendedTooltip" minOccurs="0" maxOccurs="unbounded" />
+                  </xs:sequence>
+                  <xs:attribute name="name" form="unqualified" type="xs:string" />
+                  <xs:attribute name="id" form="unqualified" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Attributes">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Attribute" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Title" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="item" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element ref="Type" minOccurs="0" maxOccurs="unbounded" />
+                    <xs:element name="MainAttribute" minOccurs="0" type="xs:boolean" />
+                  </xs:sequence>
+                  <xs:attribute name="name" form="unqualified" type="xs:string" />
+                  <xs:attribute name="id" form="unqualified" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Commands">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Command" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Action" type="xs:string" minOccurs="0" msdata:Ordinal="0" />
+                  </xs:sequence>
+                  <xs:attribute name="name" form="unqualified" type="xs:string" />
+                  <xs:attribute name="id" form="unqualified" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Parameters">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Parameter" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element ref="Type" minOccurs="0" maxOccurs="unbounded" />
+                  </xs:sequence>
+                  <xs:attribute name="name" form="unqualified" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="version" form="unqualified" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="Events" minOccurs="0"/>
+        <xs:element name="item" />
+        <xs:element ref="ExtendedTooltip" />
+        <xs:element ref="Type" />
+        <xs:element ref="Form" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
